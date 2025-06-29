@@ -1,0 +1,64 @@
+/* src/css/_variables.css */
+
+/* ===============================================
+ * CSSカスタムプロパティ (CSS変数) の定義
+ * =============================================== */
+ :root {
+    /* ライトモードの色 */
+    --bg-body: #eef4f7;
+    --bg-container: #ffffff;
+    --text-primary: #34495e;
+    --text-heading: #2c3e50;
+    --border-light: #e9ecef;
+    --border-medium: #c0d1e0;
+    --border-dark: #d4dee5;
+    --input-placeholder: #95a5a6;
+    --button-primary: #2ecc71;
+    --button-primary-hover: #27ae60;
+    --button-danger: #e74c3c;
+    --button-danger-hover: #c0392b;
+    --button-secondary: #e9eff2;
+    --button-secondary-hover: #dfe7ed;
+    --button-active: #3498db;
+    --button-active-hover: #2980b9;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --completed-bg: #e8ecef;
+    --completed-text: #95a5a6;
+    --category-bg: #95a5a6;
+    --area-bg: #f7f9fb;
+    --area-border: #e0e6eb;
+
+    /* モード切り替えボタンの位置 */
+    --toggle-button-top: 15px;
+    --toggle-button-right: 15px;
+}
+
+/* ダークモードの色 (bodyに.dark-modeクラスが付いた時に適用) */
+body.dark-mode {
+    --bg-body: #2c3e50;
+    --bg-container: #34495e;
+    --text-primary: #ecf0f1;
+    --text-heading: #ecf0f1;
+    --border-light: #45617d;
+    --border-medium: #5a7a97;
+    --border-dark: #4d6780;
+    --input-placeholder: #bdc3c7;
+    --button-primary: #27ae60;
+    --button-primary-hover: #2ecc71;
+    --button-danger: #c0392b;
+    --button-danger-hover: #e74c3c;
+    --button-secondary: #4d6780;
+    --button-secondary-hover: #5a7a97;
+    --button-active: #2980b9;
+    --button-active-hover: #3498db;
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --shadow-medium: rgba(0, 0, 0, 0.3);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --completed-bg: #4d6780;
+    --completed-text: #aebfd2;
+    --category-bg: #7f8c8d;
+    --area-bg: #3a526b;
+    --area-border: #4d6780;
+}

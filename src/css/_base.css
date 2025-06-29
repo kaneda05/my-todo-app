@@ -1,0 +1,57 @@
+/* src/css/_base.css */
+
+/* ===============================================
+ * 基本設定
+ * =============================================== */
+ body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: var(--bg-body);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    color: var(--text-primary);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    background-color: var(--bg-container);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    width: 100%;
+    max-width: 650px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    position: relative;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* テーマ切り替えボタンのスタイル */
+#theme-toggle-button {
+    position: absolute;
+    top: var(--toggle-button-top);
+    right: var(--toggle-button-right);
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+
+#theme-toggle-button:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-heading);
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOリスト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="theme-toggle-button" aria-label="テーマを切り替える">🌙</button>
+
+        <h1>TODOリスト</h1>
+        <div class="input-area">
+            <input type="text" id="todo-input" placeholder="新しいTODOを入力">
+            <select id="category-select">
+                <option value="all">カテゴリを選択</option>
+                <option value="uncategorized">未分類</option>
+                <option value="add-new-category">新しいカテゴリを追加...</option>
+            </select>
+            <select id="priority-select">
+                <option value="medium">優先度: 中</option>
+                <option value="high">優先度: 高</option>
+                <option value="low">優先度: 低</option>
+                <option value="unset">優先度: 未設定</option>
+            </select>
+            <button id="add-button">追加</button>
+        </div>
+
+        <div class="filter-area">
+            <button id="filter-all" class="active">すべて</button>
+            <button id="filter-active">未完了</button>
+            <button id="filter-completed">完了済み</button>
+        </div>
+
+        <div class="sort-area">
+            <span>並び替え:</span>
+            <button id="sort-newest" class="active">新しい順</button>
+            <button id="sort-oldest">古い順</button>
+            <button id="sort-priority">優先度順</button>
+        </div>
+
+        <div class="category-filter-area">
+            <span>カテゴリフィルター:</span>
+            <select id="category-filter-select">
+                <option value="all-categories" selected>全てのカテゴリ</option>
+                <option value="uncategorized">未分類</option>
+            </select>
+        </div>
+        
+        <ul id="todo-list"></ul>
+    </div>
+
+    <div id="manage-categories-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="manage-categories-close-button">&times;</span>
+            <h2>カテゴリを管理</h2>
+            <div id="category-list-container">
+                </div>
+            <button id="add-category-modal-button">新しいカテゴリを追加</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

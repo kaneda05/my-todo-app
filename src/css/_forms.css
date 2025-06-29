@@ -1,0 +1,82 @@
+/* src/css/_forms.css */
+
+/* 入力エリア */
+.input-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#todo-input {
+    flex-grow: 1;
+    padding: 14px 18px;
+    border: 1px solid var(--border-medium);
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--bg-container);
+    color: var(--text-primary);
+}
+
+#todo-input::placeholder {
+    color: var(--input-placeholder);
+}
+
+#todo-input:focus {
+    border-color: var(--button-active);
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+/* input-area内のselect要素のスタイルを調整 */
+.input-area select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    background-color: var(--bg-container);
+    color: var(--text-primary);
+    font-size: 16px;
+    flex-grow: 0;
+    margin-right: 10px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2C197.6l-14.7%2C14.7c-2.5%2C2.5-6.5%2C2.5-9%2C0L146.2%2C82.7L28.8%2C197.6c-2.5%2C2.5-6.5%2C2.5-9%2C0L5%2C182.9c-2.5%2C-2.5-2.5%2C-6.5%2C0%2C-9L141.7%2C4.7c2.5%2C-2.5%2C6.5%2C-2.5%2C9%2C0L287%2C188.6C289.5%2C191.1%2C289.5%2C195.1%2C287%2C197.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-area select:focus {
+    border-color: var(--button-active);
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+/* 優先度選択ドロップダウンのID指定 */
+#priority-select {
+    min-width: 120px;
+}
+
+#add-button {
+    background-color: var(--button-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 25px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.2);
+}
+
+#add-button:hover {
+    background-color: var(--button-primary-hover);
+    transform: translateY(-2px);
+}
+
+#add-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(46, 204, 113, 0.2);
+}

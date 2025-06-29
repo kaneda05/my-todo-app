@@ -1,0 +1,80 @@
+/* src/css/_areas.css */
+
+/* フィルタリングとソートエリアの共通スタイル */
+.filter-area,
+.sort-area,
+.category-filter-area {
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--area-bg);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--area-border);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.filter-area button,
+.sort-area button,
+.category-filter-area #category-filter-select {
+    background-color: var(--button-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-dark);
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-area button:hover,
+.sort-area button:hover,
+.category-filter-area #category-filter-select:hover {
+    background-color: var(--button-secondary-hover);
+    border-color: var(--border-medium);
+}
+
+.filter-area button.active,
+.sort-area button.active {
+    background-color: var(--button-active);
+    color: white;
+    border-color: var(--button-active);
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+}
+
+.sort-area span,
+.category-filter-area span {
+    font-size: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.category-filter-area #category-filter-select {
+    min-width: 140px;
+}
+
+#category-filter-select option {
+    background-color: var(--area-bg);
+    color: var(--text-primary);
+}
+
+/* 並び替えボタンの調整 */
+.sort-area button {
+    min-width: 80px;
+}
+#sort-priority {
+    background-color: var(--button-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-dark);
+}
+#sort-priority.active {
+    background-color: var(--button-active);
+    color: white;
+    border-color: var(--button-active);
+}
+
+/* 一括削除ボタンエリアのスタイルは削除 */

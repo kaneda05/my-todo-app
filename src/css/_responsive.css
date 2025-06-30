@@ -28,7 +28,7 @@
     }
 
     .input-area {
-        flex-direction: column;
+        flex-direction: column; /* スマホでは縦並び */
         gap: 12px;
         margin-bottom: 20px;
     }
@@ -36,14 +36,14 @@
     #todo-input,
     .input-area select, /* input-area内のselect全般 */
     #add-button {
-        width: 100%;
+        width: 100%; /* 幅を100%に */
         box-sizing: border-box;
         font-size: 16px;
         padding: 12px 15px;
-        margin-right: 0;
+        margin-right: 0; /* 横並びの時のマージンをリセット */
     }
 
-    .input-area select {
+    .input-area select { /* 矢印の位置調整 */
         padding-right: 15px;
         background-position: right 8px center;
         background-size: 10px;
@@ -52,7 +52,7 @@
     .filter-area,
     .sort-area,
     .category-filter-area {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* ボタンが収まらない場合に折り返す */
         justify-content: center;
         gap: 8px;
         padding: 12px 15px;
@@ -62,80 +62,86 @@
     .filter-area button,
     .sort-area button,
     .category-filter-area #category-filter-select {
-        flex: 1 1 auto;
-        min-width: unset;
+        flex: 1 1 auto; /* ボタンが柔軟に幅を調整 */
+        min-width: unset; /* 最小幅を解除 */
         font-size: 14px;
         padding: 10px 12px;
     }
 
     .sort-area span,
     .category-filter-area span {
-        width: 100%;
+        width: 100%; /* テキストを一行にする */
         text-align: center;
         margin-bottom: 5px;
     }
     
-    /* bulk-action-area のスタイルは削除 */
+    /* bulk-action-area は削除済み */
 
     #todo-list li {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column; /* スマホでは縦並びに変更 */
+        align-items: flex-start; /* 左寄せ */
         padding: 12px 15px;
         margin-bottom: 10px;
         border-radius: 6px;
     }
 
-    /* select-task-checkbox のスタイルは削除 */
-    /* #todo-list li .select-task-checkbox {
-        margin-right: 10px;
-        transform: scale(1.2);
-    } */
+    /* select-task-checkbox のスタイルは削除済み */
 
     .todo-left-content {
-        flex-direction: row;
-        align-items: center;
-        width: auto;
-        margin-right: 10px;
-        margin-bottom: 0;
-        flex-wrap: nowrap;
-        gap: 0;
+        flex-direction: column; /* スマホでは縦並びに変更 */
+        align-items: flex-start; /* 左寄せ */
+        width: 100%; /* 幅を100%に */
+        margin-right: 0; /* 右マージンをリセット */
+        margin-bottom: 10px; /* 下に余白 */
+        flex-wrap: wrap; /* 必要に応じて折り返す */
+        gap: 0; /* 要素間のgapは個別に調整 */
     }
 
-    #todo-list li input[type="checkbox"] {
-        margin-right: 8px;
-        margin-bottom: 0;
+    #todo-list li input[type="checkbox"] { /* 完了用チェックボックス */
+        margin-right: 0; /* 横並びの時のマージンをリセット */
+        margin-bottom: 8px; /* テキストとの間隔 */
     }
 
     .todo-text {
-        font-size: 16px;
-        width: auto;
-        margin-right: 10px;
-        margin-bottom: 0;
+        font-size: 16px; /* スマホでテキストサイズを調整 */
+        width: 100%; /* 幅を100%に */
+        margin-right: 0; /* 右マージンをリセット */
+        margin-bottom: 5px; /* カテゴリなどとの間隔 */
         flex-shrink: 1;
     }
     
     .todo-category,
     .todo-priority {
-        margin-left: 0;
-        margin-right: 5px;
-        margin-bottom: 0;
+        margin-left: 0; /* 横並びの時のマージンをリセット */
+        margin-right: 5px; /* カテゴリと優先度の間の間隔 */
+        margin-bottom: 0; /* 縦並びの時のマージンをリセット */
+        align-self: flex-start; /* 左寄せ */
+    }
+    .todo-category {
+        margin-bottom: 5px; /* カテゴリの後に優先度が来る場合に少しマージン */
     }
 
+    /* 編集モードの入力欄、カテゴリ、優先度選択ドロップダウン */
     #todo-list li .edit-input,
     .edit-category-select,
     .edit-priority-select {
-        width: 100%;
+        width: 100%; /* 幅を100%に */
         box-sizing: border-box;
         margin-right: 0;
-        margin-bottom: 8px;
+        margin-bottom: 8px; /* 縦並びなので下マージン */
+        font-size: 15px;
+    }
+    .edit-priority-select {
+        margin-bottom: 10px; /* 優先度選択の下に少し多めにマージン */
     }
 
     #todo-list li button {
-        width: auto;
-        box-sizing: content-box;
-        padding: 8px 12px;
-        font-size: 13px;
-        margin-left: auto;
+        width: 100%; /* 幅を100%に */
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 14px;
+        margin-left: 0; /* 右端寄せをリセット */
+        margin-top: 5px; /* 上に少し余白 */
     }
 
     .modal-content {

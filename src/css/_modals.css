@@ -19,8 +19,8 @@
     align-items: center;
     background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(3px);
-    overflow: auto; /* 内容が画面より大きい場合にスクロール可能に */
-    display: none; /* 初期状態は非表示 */
+    overflow: auto;
+    display: none;
 }
 
 .modal-content {

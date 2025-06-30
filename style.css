@@ -8,27 +8,3 @@
 @import url("src/css/_todo-list.css");
 @import url("src/css/_modals.css");
 @import url("src/css/_responsive.css");
-/* ===============================================
- * カスタムアラート（モーダルウィンドウ）のスタイル
- * およびカテゴリ管理モーダルの基本スタイル
- * =============================================== */
-
- .modal {
-    position: fixed; /* 画面に対して固定 */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; /* 四方から0にすることで画面いっぱいに広がる */
-    width: 100%; /* 明示的に指定 */
-    height: 100%; /* 明示的に指定 */
-    display: flex; /* 子要素をFlexboxで中央に配置 */
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center;   /* 垂直方向の中央揃え */
-    background-color: rgba(0,0,0,0.5); /* 半透明の黒背景 */
-    backdrop-filter: blur(3px); /* 背景を少しぼかす */
-    z-index: 1000; /* 他の要素より常に手前に表示 */
-    overflow: auto; /* 内容が画面より大きい場合にスクロール可能に */
-    
-    /* 重要な修正: 初期状態は非表示にする */
-    display: none; 
-}

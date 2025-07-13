@@ -31,6 +31,9 @@
         flex-direction: column; /* スマホでは縦並び */
         gap: 12px;
         margin-bottom: 20px;
+        /* ★追加: input-area自身が幅を占有し、子要素がはみ出さないように */
+        width: 100%;
+        box-sizing: border-box; /* パディングとボーダーを幅に含める */
     }
 
     #todo-input,
@@ -41,6 +44,7 @@
         font-size: 16px;
         padding: 12px 15px;
         margin-right: 0; /* 横並びの時のマージンをリセット */
+        flex-shrink: 1; /* ★追加: 必要に応じて縮むことを許可 */
     }
 
     .input-area select { /* 矢印の位置調整 */
